@@ -13,11 +13,8 @@ app.all('/', function(req, res, next) {
 })
 
 app.post('/', function(req, res){
-  console.log(req.body.tiles);
-  const url = req.body.tiles;
-  var base64Image = new Buffer(url, 'binary').toString('base64');
-  var result = 'data:image/jpeg;base64,' + base64Image;
-  res.status(200).send(result)
+  console.log(req.body);
+  res.send(req.body);
 
 });
 
