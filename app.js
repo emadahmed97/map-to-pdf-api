@@ -13,7 +13,8 @@ app.all('/', function(req, res, next) {
 })
 
 app.post('/', function(req, res){
-  console.log(req.body);
+  var jsonRequest = req.body;
+  console.log(Object.keys(jsonObj)[0]);
   res.send(JSON.stringify(req.body));
 
 });
