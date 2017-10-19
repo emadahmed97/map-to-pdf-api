@@ -11,6 +11,7 @@ app.all('/', function(req, res, next) {
 
 
 app.post('/', (req, res) => {
+  console.log(req);
   const url = req.data.tiles
   var base64Image = new Buffer(url, 'binary').toString('base64')
   var result = 'data:image/jpeg;base64,' + base64Image
