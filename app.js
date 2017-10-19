@@ -13,7 +13,12 @@ app.all('/', function(req, res, next) {
 })
 
 app.post('/', function(req, res){
-  console.log(req.body)
+  console.log(req.body);
+  const util=require('util');let s=util.inspect(req.body)
+  .split(`Content-Disposition: form-data; name`);s.splice(0,1);
+  let r=`{"`;s.forEach((e)=>{r+=e.split(`\\r\\n------`)[0]
+  .replace(`"\\r\\n\\r\\n`,`":"`).replace(`\': \'"`,``)
+  .replace(`=`,``)+`",`});s=r.slice(0,-1)+`}`;console.log(s);
   const url = req.body.tiles;
   var base64Image = new Buffer(url, 'binary').toString('base64');
   var result = 'data:image/jpeg;base64,' + base64Image;
