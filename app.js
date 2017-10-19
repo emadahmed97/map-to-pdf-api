@@ -1,7 +1,7 @@
 var express = require('express')
 var base64 = require('node-base64-image');
 
-const app = express()
+const app = express();
 
 app.all('/', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -17,6 +17,6 @@ app.post('/', (req, res) => {
   res.status(200).send(result)
 });
 
-app.listen(process.env.port || 3000, (err) => {
-  console.log('server is on' +  process.env.port || 3000);
-})
+var server = app.listen( process.env.PORT || 3000, function(){
+  console.log('Server listening on port ' + process.env.PORT || 3000  );
+});
