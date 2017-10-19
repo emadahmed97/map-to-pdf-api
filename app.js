@@ -14,7 +14,7 @@ app.all('/', function(req, res, next) {
 
 app.post('/', function(req, res){
   console.log(req.body);
-  res.send(JSON.parse(req.body));
+  res.send(JSON.stringify(req.body));
 
 });
 
