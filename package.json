@@ -1,0 +1,17 @@
+{
+  "name": "map-to-pdf-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "base64-img": "^1.0.3",
+    "express": "^4.16.2",
+    "node-base64-image": "^1.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
