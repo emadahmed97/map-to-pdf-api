@@ -13,7 +13,7 @@ app.all('/', function(req, res, next) {
 })
 
 app.post('/', function(req, res){
-  console.log(req.body);
+  console.log(JSON.parse(req.body));
   res.send(req.body);
 
 });
