@@ -14,7 +14,7 @@ app.all('/', function(req, res, next) {
 
 app.post('/', function(req, res){
   console.log('hit upload');
-  console.log(req);
+  console.log(req.body.tiles);
   var response = {'hello': 'hello'};
   res.json(response);
 
